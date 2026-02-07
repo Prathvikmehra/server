@@ -22,6 +22,12 @@ app.get("/users", (req, res) => {
   res.status(200).json(users);
 });
 
+app.post("/users", (req, res) => {
+  
+});
+
+
+
 app.get("/users/:id", (req, res) => {
   const userId = Number(req.params.id);
   const user = users.find(u => u.id === userId);
@@ -29,7 +35,7 @@ app.get("/users/:id", (req, res) => {
   if (!user) {
     return res.status(404).json({ message: "User not found" });
   }
-
+  
   res.status(200).json(user);
 });
 
