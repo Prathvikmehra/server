@@ -10,6 +10,11 @@ const users = [
     {attendence:'12',uid:101561,total_sub:12,bonus:'30',name:'land'}
 ]
 
+app.get("/", (req, res) => {
+  res.send("Server is running 🚀");
+});
+
+
 app.get("/users/:uid", (req, res) => {
   const userId = Number(req.params.uid);
   const user = users.find(u => u.uid === userId);
@@ -48,7 +53,7 @@ app.put("/users/:uid", (req, res) => {
     ...users[index],
     ...req.body
   };
-  
+
   res.status(200).json({
     message: "User replaced",
     user: users[index]
