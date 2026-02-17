@@ -10,7 +10,7 @@ const users = [
     {attendence:'12',uid:101561,total_sub:12,bonus:'30',name:'land'}
 ]
 
-app.get("/", (req, res) => {
+app.get("/users", (req, res) => {
   res.send("Server is running 🚀");
 });
 
