@@ -10,8 +10,12 @@ const users = [
     {attendence:'12',uid:101561,total_sub:12,bonus:'30',name:'land'}
 ]
 
-app.get("/users", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Server is running 🚀");
+});
+
+app.get("/users", (req, res) => {
+  res.status(200).json(users);
 });
 
 
