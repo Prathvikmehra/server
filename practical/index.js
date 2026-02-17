@@ -1,7 +1,9 @@
 const express = require("express");
 
+const cors = require('cors');
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const users = [
     {attendence:'80',uid:108243,total_sub:14,bonus:'30',name:'dax'},
